@@ -15,7 +15,7 @@ npm install prisma --save-dev
 npx prisma init --datasource-provider sqlite
 ```
 
-Add models into `./prisma/schema.prisma` according to the doc:
+Add models into `./prisma/schema.prisma` according to the doc. Then initiate prisma migration:
 ```
 npx prisma migrate dev --name init
 ```
@@ -27,6 +27,8 @@ Datasource "db": SQLite database "dev.db" at "file:./dev.db"
 
 Error: Schema engine exited. Error: Command failed with exit code 1: /mnt/sda3/nextJs/myapp-npm/node_modules/@prisma/engines/schema-engine-debian-openssl-3.0.x cli --datasource <REDACTED> can-connect-to-database
 ```
+
+in my `.env` file: `DATABASE_URL="file:./dev.db"`
 
 My Environment & setup
 - OS: Linux Mint 22 Wilma based on Ubuntu 24.04 noble
